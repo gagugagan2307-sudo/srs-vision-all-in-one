@@ -386,6 +386,7 @@ function printAudit(){const a=getAuditLog();const rows=a.map(x=>`<tr><td>${esc(n
 </style>
 </head><body><div class="watermark"><img src="${logo}"></div><div class="sheet"><div class="head"><img src="${logo}"><div><div class="company">${esc(company.name||'SRS Vision')}</div><div class="address">${esc(company.address||'')}</div></div></div><h1>SRS Vision Audit Trail</h1><table><tr><th>Date</th><th>User</th><th>Action</th><th>Details</th></tr>${rows}</table></div>
 
+<script src="final-fix.js"></script>
 </body></html>`);w.document.close();setTimeout(()=>w.print(),300)}
 /* SRS Vision Snapshot Column Customizer */
 const SNAP_DEFAULT_COLS=[['date','Date'],['teams','Teams'],['clients','Clients'],['projects','Projects'],['completed','Completed'],['notCompleted','Pending'],['income','Revenue'],['value','Project Value'],['enquiries','Enquiries']];
@@ -415,6 +416,7 @@ function printSnapshot3(index,scope='all'){const snaps=JSON.parse(localStorage.g
 </style>
 </head><body><div class="watermark"><img src="${logo}" alt="SRS Vision watermark"></div><div class="sheet"><div class="head"><img src="${logo}" alt="SRS Vision logo"><div><div class="name">${esc(company.name||'SRS Vision')}</div><div class="addr">${esc(company.address||'')}</div></div></div><h1>3-Day Report Snapshot</h1><div>Generated: ${esc(x.date)}</div><table>${rows}</table></div>
 
+<script src="final-fix.js"></script>
 </body></html>`);w.document.close();setTimeout(()=>w.print(),350)}
 
 function exportAudit(){const a=getAuditLog();const csv=[['Date','User','Action','Details'],...a.map(x=>[x.date,x.actor,x.action,x.details])].map(r=>r.map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(',')).join('\\n');const blob=new Blob([csv],{type:'text/csv'}),url=URL.createObjectURL(blob),el=document.createElement('a');el.href=url;el.download='3FS_Audit_Trail.csv';el.click();URL.revokeObjectURL(url)}
@@ -603,6 +605,7 @@ function printReportsPage(){const content=document.getElementById('content');if(
 </style>
 </head><body><div class="watermark"><img src="${logo}" alt="SRS Vision watermark"></div><div class="sheet"><div class="printhead"><img src="${logo}" alt="SRS Vision logo"><div><div class="company">${esc(name)}</div><div class="address">${esc(address)}</div></div></div><div class="reporttitle">Reports & Revenue</div>${clone.innerHTML}</div>
 
+<script src="final-fix.js"></script>
 </body></html>`);w.document.close();setTimeout(()=>w.print(),350)}
 
 function printAllTeamReports(){const sec=document.querySelector('.team-report-section');if(!sec)return;const btn=sec.querySelector('.sectionhead button');if(btn)printReport(btn,'SRS Vision SRS Vision Final Team Report')}
@@ -622,6 +625,7 @@ function printReport(btn,title){const section=btn?.closest('.section,.card')||do
 </style>
 </head><body><div class="watermark"><img src="${logo}" alt="SRS Vision watermark"></div><div class="sheet"><div class="printhead"><img src="${logo}" alt="SRS Vision logo"><div><div class="company">${esc(name)}</div><div class="address">${esc(address)}</div></div></div><div class="reporttitle">${esc(title)}</div>${clone.outerHTML}</div>
 
+<script src="final-fix.js"></script>
 </body></html>`);w.document.close();setTimeout(()=>w.print(),350)}
 /* SRS Vision Snapshot Column Customizer */
 function reportText(){return document.getElementById('content')?.innerText||'SRS Vision Report'}
@@ -676,6 +680,7 @@ function customerReceiptHTML(){const customer=document.getElementById('receiptCu
 </style>
 </head><body><div class="watermark"><img src="${location.origin+location.pathname.replace(/[^/]*$/,'')}srs-vision-logo.png" alt="SRS Vision watermark"></div><div class="receipt"><div class="head"><div><div class="brand">${esc(companyName)}</div><div class="muted">${esc(companyAddress)}</div><div class="muted">Customer Fee Receipt</div></div><img class="logo" src="${location.origin+location.pathname.replace(/[^/]*$/,'')}srs-vision-logo.png" onerror="this.style.display='none'"></div><div class="grid"><div class="box"><b>Receipt No.</b><br>${receiptNo}</div><div class="box"><b>Date</b><br>${date}</div><div class="box"><b>Customer</b><br>${esc(customer)}<br>${esc(phone)}<br>${esc(email)}</div><div class="box"><b>Project / Service</b><br>${esc(project)}<br>Payment: ${esc(method)}</div></div><div class="total"><div class="row"><span>Total Fee</span><b>${money(total)}</b></div><div class="row"><span>Previous Paid</span><b>${money(prev)}</b></div><div class="row"><span>Amount Paid Now</span><b>${money(paid)}</b></div><div class="row balance"><span>Remaining Balance</span><b>${money(balance)}</b></div></div><div class="footer">Thank you for choosing SRS Vision. This receipt confirms the payment recorded for the above project/service.</div></div>
 
+<script src="final-fix.js"></script>
 </body></html>`}
 /* SRS Vision Snapshot Column Customizer */
 function previewCustomerReceipt(){const html=customerReceiptHTML(),w=window.open('','_blank','width=820,height=900');if(!w)return alert('Please allow pop-ups to preview the receipt.');w.document.write(html);w.document.close()}
@@ -1092,6 +1097,7 @@ setTimeout(()=>{try{if(typeof nav==='function')nav();if(typeof render==='functio
 </script>
 
 <script src="srs-tool-dashboards.js"></script>
+<script src="final-fix.js"></script>
 </body></html>
 <style id="3fs-final-color-fix">
 /* SRS Vision final visual polish: never render navigation buttons as white/default buttons */
