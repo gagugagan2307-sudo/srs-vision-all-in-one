@@ -1,8 +1,18 @@
-# SRS Vision — Clean Full-Code Website
+# SRS Vision — Full Website + Graphic Design + Realtime Database
 
-This is the clean replacement for the previous multi-patch website. It uses a small SPA with one navigation layer, one state model, one Supabase client, and separate route workspaces.
+This package contains the SRS Vision website, Graphic Design workspace, SRS Vision branding/logo, no-login Anonymous Auth, and a hardened Supabase realtime sync layer.
 
-Main dashboard remains the home screen. Specialist areas open in separate workspaces: Graphic Design, AI Tools, Video Tools, Image Tools, Document Tools, PDF Tools, Productivity, Developer Tools, Business Tools, Education, Entertainment, Utilities, Social Media, Notifications, Money Transfer, Teams, Projects, Files, Calendar, Reports, Accounts, Bank, Meetings, Announcements, Contacts, Database and Settings.
+## Files
+- `index.html` — main dashboard and all website sections
+- `portal.html` — SRS Vision portal
+- `auth.js` — credential-free Supabase Anonymous Auth bridge
+- `live-db.js` — realtime shared-state sync with diagnostics/reconnects
+- `database.sql` — complete Supabase table, RLS, RPC, trigger, grants, and Realtime publication setup
+- `supabase-config.js` — browser-safe Supabase project configuration
+- `srs-vision-logo.png` — SRS Vision logo
+- `srs-vision-dashboard-concept.png` / `srs-vision-dashboard-hero.jpg` — dashboard graphics
 
-All 12 SRS Vision members are preloaded in one team:
-Gagan R; Teja Sawaroop; G M Chinmayee; Deepika N S; Sinchana J; Geetha H K; Gangaraju K V; Ganesh K; Girish M S; Gagana H R; Gangothri H R; Prabhakar.
+## Important
+Run the complete `database.sql` in the Supabase project and enable Anonymous Sign-Ins + Realtime before expecting cross-device sync.
+
+The website currently has no username/password gate. Because anonymous sessions are intentionally used, anyone who can reach the dashboard can write data allowed by the anonymous RLS policies.
