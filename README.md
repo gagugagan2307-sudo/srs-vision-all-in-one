@@ -1,18 +1,37 @@
-# SRS Vision — Full Website + Graphic Design + Realtime Database
+# SRS Vision — Internal Team Workspace
 
-This package contains the SRS Vision website, Graphic Design workspace, SRS Vision branding/logo, no-login Anonymous Auth, and a hardened Supabase realtime sync layer.
+This is a standalone browser workspace for the SRS Vision team.
 
-## Files
-- `index.html` — main dashboard and all website sections
-- `portal.html` — SRS Vision portal
-- `auth.js` — credential-free Supabase Anonymous Auth bridge
-- `live-db.js` — realtime shared-state sync with diagnostics/reconnects
-- `database.sql` — complete Supabase table, RLS, RPC, trigger, grants, and Realtime publication setup
-- `supabase-config.js` — browser-safe Supabase project configuration
-- `srs-vision-logo.png` — SRS Vision logo
-- `srs-vision-dashboard-concept.png` / `srs-vision-dashboard-hero.jpg` — dashboard graphics
+## Included
+- Dashboard
+- Team CRUD
+- Projects CRUD
+- Clients internal records
+- Service work queue
+- Graphic Design / Logo Design / UI/UX / Web Development / Video Editing / Social Media task creation
+- AI workspace launchers
+- Reports
+- Revenue / Expense / P&L
+- Work Music: online links + offline user-owned/licensed audio
+- Local persistence
+- Optional Supabase anonymous-auth + realtime shared state
+- JSON backup export
 
-## Important
-Run the complete `database.sql` in the Supabase project and enable Anonymous Sign-Ins + Realtime before expecting cross-device sync.
+## Run
+Open `index.html` in a browser. For best results use a small local static server (VS Code Live Server is fine).
 
-The website currently has no username/password gate. Because anonymous sessions are intentionally used, anyone who can reach the dashboard can write data allowed by the anonymous RLS policies.
+## Access code
+Default: `SRS@vision`
+Change it in `config.js`.
+
+## Supabase
+1. Create/open your Supabase project.
+2. Run `database.sql` in SQL Editor.
+3. If using the current anonymous-auth approach, enable Anonymous Sign-Ins in Supabase Auth.
+4. Put the project URL and publishable/anon key in `config.js`.
+5. Reload the workspace.
+
+The app also works in local mode when Supabase is not configured.
+
+## Important music note
+Offline files should be audio the team owns or is licensed to use. Online entries should point to legitimate streams/providers. This project does not bundle or download copyrighted commercial music catalogs.
