@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f7ff">
+  <meta name="description" content="SRS Vision — creative digital services, web development, UI/UX, branding, graphic design, video editing and social media management.">
+  <title>SRS Vision | Ideas Into Digital Reality</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="official.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script defer src="official.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="SRS Vision home">
+    <img src="https://raw.githubusercontent.com/gagugagan05/srs-vision-firebase-realtime/main/srs-vision-logo-transparent.png" alt="SRS Vision logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+    <span class="brand-fallback">SRS</span>
+    <span class="brand-name">SRS <b>VISION</b><small>IDEAS · DESIGN · DEVELOPMENT</small></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav" id="mainNav">
+    <a class="active" href="#home">Home</a><a href="#services">Services</a><a href="#work">Portfolio</a>
+    <a href="#about">About</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a>
+    <a class="nav-quote" href="#contact">Get Quotation <span>↗</span></a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-glow glow-a"></div><div class="hero-glow glow-b"></div>
+    <div class="hero-copy">
+      <div class="pill"><span class="spark">✦</span> Student-led digital services studio</div>
+      <h1>We turn your ideas<br>into <span class="gradient-text">digital reality.</span></h1>
+      <p class="hero-lead">Creative designs. Powerful development. Smart digital solutions.</p>
+      <p class="hero-sub">Let's grow together in the digital world with ideas that look great and work beautifully.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#contact">Get a quotation <span>↗</span></a><a class="btn btn-outline" href="#work"><span class="play">▶</span> Explore our work</a></div>
+      <div class="hero-proof"><div class="proof-avatars"><i>S</i><i>R</i><i>S</i></div><span>One collaborative team<br><b>Six creative services</b></span><span class="proof-divider"></span><span class="proof-stars">✦ ✦ ✦ ✦ ✦<small>Ideas made real</small></span></div>
+    </div>
+    <div class="hero-art" aria-label="Abstract digital workspace illustration">
+      <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="float-card card-code"><span class="mini-icon blue">⌘</span><span><b>Web Development</b><small>Build · Launch · Grow</small></span></div>
+      <div class="float-card card-design"><span class="mini-icon violet">✎</span><span><b>UI / UX Design</b><small>Think · Design · Delight</small></span></div>
+      <div class="float-card card-brand"><span class="mini-icon orange">✦</span><span><b>Brand Identity</b><small>Make it memorable</small></span></div>
+      <div class="device">
+        <div class="device-top"><i></i><i></i><i></i><span>SRS VISION STUDIO</span></div>
+        <div class="device-screen"><div class="screen-symbol">SRS<span>✧</span></div><div class="screen-word">VISION</div><div class="screen-lines"><i></i><i></i><i></i></div><div class="screen-button">CREATE SOMETHING GREAT</div></div>
+        <div class="device-base"></div>
+      </div>
+      <div class="floating-spark spark-one">✦</div><div class="floating-spark spark-two">✧</div>
+      <div class="art-caption"><b>Ideas to impact.</b><span>DESIGN WITH PURPOSE</span></div>
+    </div>
+    <div class="hero-bottom"><span>DESIGN</span><i></i><span>DEVELOPMENT</span><i></i><span>GROWTH</span><b>SCROLL TO EXPLORE ↓</b></div>
+  </section>
+
+  <section class="services section-wrap" id="services">
+    <div class="section-kicker">WHAT WE DO <span>✦</span> OUR EXPERTISE</div>
+    <div class="section-heading"><div><h2>Everything your brand needs<br><em>to move forward.</em></h2></div><p>Complete digital solutions under one roof — built around your goals, your audience and your next big idea.</p></div>
+    <div class="service-grid" id="serviceGrid">
+      <article class="service-card"><div class="service-icon icon-blue">⌘</div><span class="service-number">01 / BUILD</span><h3>Web Development</h3><p>Modern, responsive websites and digital experiences that work beautifully.</p><a href="#contact" aria-label="Enquire about web development">↗</a></article>
+      <article class="service-card"><div class="service-icon icon-purple">✎</div><span class="service-number">02 / EXPERIENCE</span><h3>UI/UX Design</h3><p>User-friendly interfaces designed to make every interaction feel effortless.</p><a href="#contact" aria-label="Enquire about UI UX design">↗</a></article>
+      <article class="service-card"><div class="service-icon icon-orange">✧</div><span class="service-number">03 / IDENTITY</span><h3>Logo Design</h3><p>Distinctive brand identities that help your business stand out and be remembered.</p><a href="#contact" aria-label="Enquire about logo design">↗</a></article>
+      <article class="service-card"><div class="service-icon icon-green">▧</div><span class="service-number">04 / VISUALS</span><h3>Graphic Design</h3><p>Creative visuals for social media, marketing, presentations and print.</p><a href="#contact" aria-label="Enquire about graphic design">↗</a></article>
+      <article class="service-card"><div class="service-icon icon-pink">▶</div><span class="service-number">05 / MOTION</span><h3>Video Editing</h3><p>Engaging edits that turn your footage and ideas into compelling stories.</p><a href="#contact" aria-label="Enquire about video editing">↗</a></article>
+      <article class="service-card"><div class="service-icon icon-cyan">⌁</div><span class="service-number">06 / GROWTH</span><h3>Social Media Management</h3><p>Consistent content and thoughtful management to grow your online presence.</p><a href="#contact" aria-label="Enquire about social media management">↗</a></article>
+    </div>
+  </section>
+
+  <section class="about-section" id="about"><div class="about-visual"><div class="about-orb"></div><div class="about-stamp">SRS<br><b>VISION</b><span>✦</span></div><div class="about-note">DREAM IT.<br>DESIGN IT.<br><em>DEVELOP IT.</em></div><div class="about-chip">CREATIVE MINDS · PRACTICAL SKILLS</div></div><div class="about-copy"><div class="section-kicker">A LITTLE ABOUT US</div><h2>Dream. Design.<br><em>Develop. Grow.</em></h2><p>SRS Vision is a student-led digital services startup built on teamwork, creativity and practical learning. We bring design and technology together to help individuals and businesses build their presence in the digital world.</p><p>From the first idea to the final delivery, we believe in clear communication, collaborative work and solutions that create real value.</p><a class="text-link" href="#contact">Let's work together <span>↗</span></a><div class="about-stats"><div><b>06</b><small>Core services</small></div><div><b>01</b><small>Collaborative team</small></div><div><b>∞</b><small>Ideas to explore</small></div></div></div></section>
+
+  <section class="portfolio section-wrap" id="work">
+    <div class="section-kicker">OUR PORTFOLIO <span>✦</span> SELECTED WORK</div>
+    <div class="section-heading"><div><h2>Good ideas deserve<br><em>great execution.</em></h2></div><p>A look at creative projects, digital experiences and brand work from the SRS Vision team.</p></div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <article class="portfolio-card portfolio-feature"><div class="portfolio-art art-brand"><div class="brand-emblem">SRS<br><small>VISION</small></div></div><div class="portfolio-meta"><span>BRANDING</span><b>Brand identity & logo design</b></div></article>
+      <article class="portfolio-card"><div class="portfolio-art art-web"><div class="mock-browser"><i></i><i></i><i></i><div class="mock-content">Your next<br><b>big idea.</b><span></span></div></div></div><div class="portfolio-meta"><span>DEVELOPMENT</span><b>Website experiences</b></div></article>
+      <article class="portfolio-card"><div class="portfolio-art art-social"><div class="social-tiles"><i>◎</i><i>▶</i><i>f</i><i>✦</i></div></div><div class="portfolio-meta"><span>SOCIAL MEDIA</span><b>Social content & campaigns</b></div></article>
+    </div>
+  </section>
+
+  <section class="process-section" id="testimonials"><div class="section-kicker">HOW WE WORK <span>✦</span> SIMPLE & COLLABORATIVE</div><h2>From first conversation<br><em>to finished creation.</em></h2><div class="process-grid"><div><b>01</b><h3>Understand</h3><p>We listen to your goals, needs and ideas.</p></div><div><b>02</b><h3>Plan & create</h3><p>We shape the right creative direction together.</p></div><div><b>03</b><h3>Build & refine</h3><p>We develop, review and improve the work.</p></div><div><b>04</b><h3>Deliver</h3><p>We share the final result and next steps.</p></div></div></section>
+
+  <section class="contact-section" id="contact"><div class="contact-copy"><div class="section-kicker">LET'S START SOMETHING</div><h2>Your idea could be<br><em>our next creation.</em></h2><p>Tell us what you have in mind. Share a few details and the SRS Vision team can get back to you about the next steps and a quotation.</p><div class="contact-promise"><span>✦</span> Clear communication · Collaborative process</div></div>
+    <form class="enquiry-form" id="enquiryForm"><div class="form-title"><b>Tell us about your project</b><span>We'd love to hear from you.</span></div>
+      <div class="form-row"><label>Your name<input name="name" required maxlength="100" placeholder="Enter your name"></label><label>Email or phone<input name="contact" required maxlength="150" placeholder="Your contact details"></label></div>
+      <label>What service do you need?<select name="service" required><option value="">Select a service</option><option>Web Development</option><option>UI/UX Design</option><option>Logo Design</option><option>Graphic Design</option><option>Video Editing</option><option>Social Media Management</option><option>Multiple services</option></select></label>
+      <label>Tell us about your idea<textarea name="details" rows="4" maxlength="2000" placeholder="A short description of your project..."></textarea></label>
+      <label class="equipment-check"><input type="checkbox" name="equipment"><span>I may need equipment for this project</span></label>
+      <button class="btn btn-primary form-submit" type="submit">Send project enquiry <span>↗</span></button><p class="form-status" id="formStatus" aria-live="polite">Your details will be shared with the SRS Vision team.</p>
+    </form>
+  </section>
+</main>
+<footer class="footer"><a class="brand footer-brand" href="#home"><span class="brand-fallback">SRS</span><span class="brand-name">SRS <b>VISION</b><small>IDEAS · DESIGN · DEVELOPMENT</small></span></a><p>Turning ideas into digital reality.</p><div class="footer-links"><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> SRS Vision. All rights reserved.</small></footer>
+</body>
+</html>
